@@ -1,0 +1,148 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: #FFF8F0; /* Un fondo cremoso suave */
+  color: #333; /* Color de texto para contraste */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="50" y="50" width="50" height="50" fill="%23E2E2D0"/><rect x="0" y="0" width="50" height="50" fill="%23E2E2D0"/></svg>'); /* Patrón sutil de fondo */
+  background-size: 50px 50px; /* Tamaño del patrón de fondo */
+}
+
+.card {
+  background: #fff; /* Fondo blanco para contraste */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.carousel-section {
+  margin-top: 100px;
+  max-width: 800px;
+  margin-bottom: 100px;
+  transform: translateX(25%);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-section {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    transform: translateX(25%);
+  }
+  
+}
+
+@media screen {
+  
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrado automático */
+  padding: 20px; /* Padding general */
+  flex: 1; /* Crecerá para llenar el espacio disponible */
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/mexicana.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.welcome-section h1 {
+  margin: 0;
+  font-size: 3rem; /* Tamaño de fuente ajustado */
+}
+
+/* Sección Acerca de Nosotros */
+.about-section {
+  background: #fff;
+  margin-top: -50px; /* Ajuste para superposición */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Alineación vertical de los hijos */
+  justify-content: space-around; /* Espacio alrededor de los elementos */
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  flex: 0 0 45%; /* No crecerá, no se encogerá, base de 45% */
+  margin: 20px;
+}
+
+.about-text {
+  flex: 0 0 50%; /* No crecerá, no se encogerá, base de 50% */
+  margin: 20px;
+}
+
+/* Botón */
+.btn {
+  background-color: #C0392B;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block; /* Para permitir margen */
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #A93226;
+}
+
+/* Sección de Comentarios */
+.reviews-section {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto; /* Asegura que esté al final */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-image,
+  .about-text {
+    flex: 0 0 100%; /* Tomará el 100% del ancho en móviles */
+  }
+
+  .welcome-section h1,
+  .welcome-section p {
+    padding: 0 10px;
+  }
+}
+
+/* Estilos específicos de la página de inicio para sobrescribir estilos globales */
+.home .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Ajusta según sea necesario para la página de inicio */
+}
+
+/* Sobrescribe el estilo del footer solo en la página de inicio si es necesario */
+.home footer {
+  display: none; /* Oculta el footer en la página de inicio si así lo decides */
+}
